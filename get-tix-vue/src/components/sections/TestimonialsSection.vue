@@ -1,8 +1,24 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const scrollY = ref(0)
+
+const handleScroll = () => {
+  scrollY.value = window.scrollY
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
 
 <template>
-        <section class="py-12 md:py-16 lg:py-20 bg-gray-50">
-        <div class="max-w-container mx-auto px-4">
+        <section class="py-12 md:py-16 lg:py-20 bg-gray-50 relative">
+        <div class="max-w-container mx-auto px-4" :style="{ transform: `translateY(${Math.max(0, scrollY * 0.06)}px)` }">
           <div class="text-center mb-10 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Trusted by Teams Worldwide</h2>
             <p class="text-base text-gray-600">See what our users are saying about GetTix</p>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const faqs = [
   {
@@ -35,15 +35,28 @@ const faqs = [
 ]
 
 const openFaq = ref(null)
+const scrollY = ref(0)
 
 const toggleFaq = (id) => {
   openFaq.value = openFaq.value === id ? null : id
 }
+
+const handleScroll = () => {
+  scrollY.value = window.scrollY
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-        <section class="py-12 md:py-16 lg:py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
+        <section class="py-12 md:py-16 lg:py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4" :style="{ transform: `translateY(${Math.max(0, scrollY * 0.04)}px)` }">
           <div class="text-center mb-10 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
             <p class="text-base text-gray-600">Everything you need to know about GetTix</p>
