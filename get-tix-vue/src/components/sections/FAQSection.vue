@@ -55,7 +55,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-        <section class="py-12 md:py-16 lg:py-20 bg-gray-50 relative">
+        <section class="py-12 md:py-16 lg:py-20 pb-12 relative">
         <div class="max-w-4xl mx-auto px-4" :style="{ transform: `translateY(${Math.max(0, scrollY * 0.04)}px)` }">
           <div class="text-center mb-10 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
