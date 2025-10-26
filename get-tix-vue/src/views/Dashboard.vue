@@ -21,12 +21,12 @@ const handleLogout = () => {
     <!-- Header -->
     <div class="bg-white shadow">
       <div class="max-w-container mx-auto px-4 py-6">
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           <div>
-            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
-            <p class="text-gray-600">Welcome back, {{ authStore.user?.name || 'User' }}!</p>
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p class="text-sm md:text-base text-gray-600">Welcome back, {{ authStore.user?.name || 'User' }}!</p>
           </div>
-          <div class="flex items-center gap-4">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <router-link
               to="/tickets"
               class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-hover transition-colors"
