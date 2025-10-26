@@ -1,58 +1,76 @@
 <script setup></script>
 
 <template>
-  <section class="py-12 md:py-16 lg:py-20 bg-white">
+  <section class="py-16 md:py-20 lg:py-24 bg-gray-50">
     <div class="max-w-container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
-        What Our Users Say
-      </h2>
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted by Teams Worldwide</h2>
+        <p class="text-lg text-gray-600">See what our users are saying about GetTix</p>
+      </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               JD
             </div>
             <div>
-              <h4 class="font-semibold text-gray-900">John Doe</h4>
-              <p class="text-sm text-gray-600">Product Manager</p>
+              <h4 class="font-bold text-gray-900">John Davis</h4>
+              <p class="text-sm text-gray-600">Product Manager at TechCorp</p>
             </div>
           </div>
-          <p class="text-gray-700 italic">
-            "GetTix has transformed how we manage our support tickets. Highly recommended!"
+          <div class="flex mb-4">
+            <svg v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            "GetTix has completely transformed our ticket management workflow. We've reduced resolution time by 40% and improved team productivity significantly."
           </p>
         </div>
 
-        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               SM
             </div>
             <div>
-              <h4 class="font-semibold text-gray-900">Sarah Miller</h4>
-              <p class="text-sm text-gray-600">Team Lead</p>
+              <h4 class="font-bold text-gray-900">Sarah Mitchell</h4>
+              <p class="text-sm text-gray-600">Team Lead at DesignStudio</p>
             </div>
           </div>
-          <p class="text-gray-700 italic">
-            "The interface is clean and intuitive. Our team adoption was seamless."
+          <div class="flex mb-4">
+            <svg v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            "The interface is incredibly intuitive. Our entire team adopted it within days. The real-time updates and collaborative features are game-changers."
           </p>
         </div>
 
-        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
-          <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               MK
             </div>
             <div>
-              <h4 class="font-semibold text-gray-900">Michael Kim</h4>
-              <p class="text-sm text-gray-600">Developer</p>
+              <h4 class="font-bold text-gray-900">Michael Kim</h4>
+              <p class="text-sm text-gray-600">CTO at StartupHub</p>
             </div>
           </div>
-          <p class="text-gray-700 italic">
-            "Best ticket management system I've used. Makes my job much easier."
+          <div class="flex mb-4">
+            <svg v-for="i in 5" :key="i" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            "Best ticket management system we've tried. The analytics and reporting features give us incredible insights into our operations. Highly recommend!"
           </p>
         </div>
       </div>
     </div>
   </section>
+</template>
+
 </template>

@@ -5,22 +5,32 @@ const faqs = [
   {
     id: 1,
     question: "How do I create a new ticket?",
-    answer: "Simply click the 'Create Ticket' button on the Ticket Management page and fill in the required details including title, description, status, and priority."
+    answer: "Navigate to the Ticket Management page and click the 'Create Ticket' button. Fill in the title (required), description, select a status (open, in-progress, or closed), and assign a priority level. Click 'Create' to save your ticket."
   },
   {
     id: 2,
-    question: "Can I track multiple projects?",
-    answer: "Yes! GetTix allows you to manage tickets across multiple projects efficiently with our organized dashboard and filtering options."
+    question: "Can multiple team members work on the same ticket?",
+    answer: "Yes! GetTix supports collaborative ticket management. Multiple team members can view, update, and comment on tickets. Real-time synchronization ensures everyone stays up-to-date with the latest changes."
   },
   {
     id: 3,
-    question: "Is there a mobile app?",
-    answer: "Currently, GetTix is web-based and fully responsive. A mobile app is in development and will be available soon."
+    question: "Is there a mobile app available?",
+    answer: "GetTix is fully responsive and works seamlessly on all devices through your web browser. Our mobile-friendly design ensures you can manage tickets on-the-go with the same powerful features available on desktop."
   },
   {
     id: 4,
-    question: "How secure is my data?",
-    answer: "We take data security seriously. All your data is encrypted and stored securely. We never share your information with third parties."
+    question: "How secure is my ticket data?",
+    answer: "Security is our top priority. All your data is encrypted using industry-standard protocols. We never share your information with third parties. User-specific data isolation ensures each user only sees their own tickets, maintaining complete privacy."
+  },
+  {
+    id: 5,
+    question: "Can I export my tickets?",
+    answer: "Yes! You can export your tickets in various formats including CSV and JSON. Download complete ticket histories with all metadata for backup or analysis purposes."
+  },
+  {
+    id: 6,
+    question: "What browser support do you offer?",
+    answer: "GetTix supports all modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your preferred browser for the best experience and security."
   }
 ]
 
@@ -32,25 +42,26 @@ const toggleFaq = (id) => {
 </script>
 
 <template>
-  <section class="py-12 md:py-16 lg:py-20 bg-gray-50">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
-        Frequently Asked Questions
-      </h2>
+  <section class="py-16 md:py-20 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-lg text-gray-600">Everything you need to know about GetTix</p>
+      </div>
       
       <div class="space-y-4">
         <div
           v-for="faq in faqs"
           :key="faq.id"
-          class="bg-white rounded-xl shadow-md overflow-hidden"
+          class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow"
         >
           <button
             @click="toggleFaq(faq.id)"
-            class="w-full px-6 py-4 flex justify-between items-center text-left hover:bg-gray-50 transition-colors"
+            class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-gray-50 transition-colors"
           >
-            <span class="font-semibold text-gray-900">{{ faq.question }}</span>
+            <span class="font-semibold text-gray-900 text-lg">{{ faq.question }}</span>
             <svg
-              :class="['w-5 h-5 text-gray-500 transition-transform', openFaq === faq.id && 'rotate-180']"
+              :class="['w-6 h-6 text-gray-500 transition-transform flex-shrink-0 ml-4', openFaq === faq.id && 'rotate-180']"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -60,7 +71,7 @@ const toggleFaq = (id) => {
           </button>
           <div
             v-if="openFaq === faq.id"
-            class="px-6 pb-4 text-gray-600"
+            class="px-8 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4"
           >
             {{ faq.answer }}
           </div>
