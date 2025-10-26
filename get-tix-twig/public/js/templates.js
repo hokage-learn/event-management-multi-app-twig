@@ -63,53 +63,314 @@ const Templates = {
       <div class="page">
         ${this.renderNavbar()}
         
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);">
-          <div class="container text-center" style="padding-top: 80px; padding-bottom: 80px;">
-            <h1 class="text-5xl font-bold text-white mb-4">Streamline Your Ticket Management</h1>
-            <p class="text-xl text-white mb-8" style="opacity: 0.9;">Efficient ticket tracking and management system for modern teams</p>
-            <a href="#/signup" class="btn btn-lg" style="background-color: white; color: var(--color-primary);">Get Started</a>
+        <!-- Hero Section with Wave SVG -->
+        <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 50%, #f97316 100%);">
+          <!-- Background elements with parallax effect -->
+          <div class="absolute top-20 right-20 w-64 h-64 bg-white bg-opacity-10 rounded-full" style="filter: blur(80px);"></div>
+          <div class="absolute bottom-20 left-20 w-80 h-80 bg-opacity-20 rounded-full" style="background-color: var(--color-accent); filter: blur(80px);"></div>
+          
+          <!-- Content -->
+          <div class="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-16 text-center" style="margin-top: 80px;">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Streamline Your Ticket Management
+            </h1>
+            <p class="text-base md:text-lg lg:text-xl text-white" style="opacity: 0.9; max-width: 36rem; margin-left: auto; margin-right: auto;">
+              Efficient ticket tracking and management system for modern teams
+            </p>
+            <div class="mt-6 md:mt-8">
+              <a href="#/signup" class="btn btn-lg" style="background-color: white; color: var(--color-primary); padding: 12px 24px; font-weight: 600;">
+                Get Started
+              </a>
+            </div>
+          </div>
+          
+          <!-- Wave with parallax effect -->
+          <div class="absolute bottom-0 left-0 right-0" style="transform: translateY(0px);">
+            <img src="assets/wave-background.svg" alt="Wave" style="width: 100%; height: 80px;">
           </div>
         </section>
 
         <!-- About Section -->
-        <section class="py-20 bg-white">
-          <div class="container">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div class="card">
-                  <h3 class="font-bold text-xl mb-4">Dashboard Preview</h3>
-                  <div class="bg-gray-100 p-4 rounded-lg">
-                    <div class="grid grid-cols-2 gap-2">
-                      <div class="bg-white p-3 rounded shadow-sm">
-                        <div class="text-xs text-gray-600">Total</div>
-                        <div class="text-2xl font-bold text-primary">12</div>
+        <section id="about" class="py-12 md:py-16 lg:py-20 bg-white relative border-t border-b border-gray-200">
+          <div class="max-w-6xl mx-auto px-4" style="transform: translateY(0px);">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <!-- Left Side - Dashboard Image -->
+              <div class="relative">
+                <div class="bg-gradient-to-br p-8 rounded-3xl shadow-lg" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);">
+                  <div class="aspect-video bg-white bg-opacity-95 rounded-lg p-6 shadow-lg">
+                    <!-- Mock Dashboard UI -->
+                    <div class="flex items-center gap-2 mb-4">
+                      <div class="w-3 h-3 rounded-full" style="background-color: #ef4444;"></div>
+                      <div class="w-3 h-3 rounded-full" style="background-color: #f59e0b;"></div>
+                      <div class="w-3 h-3 rounded-full" style="background-color: #10b981;"></div>
+                      <div class="ml-4 text-sm font-semibold text-gray-700">GetTix Dashboard</div>
+                    </div>
+                    
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                      <div class="bg-white rounded-lg p-3 shadow">
+                        <div class="text-xs text-gray-600 mb-1">Total</div>
+                        <div class="text-2xl font-bold" style="color: var(--color-primary);">12</div>
                       </div>
-                      <div class="bg-white p-3 rounded shadow-sm">
-                        <div class="text-xs text-gray-600">Open</div>
-                        <div class="text-2xl font-bold text-accent">8</div>
+                      <div class="bg-white rounded-lg p-3 shadow">
+                        <div class="text-xs text-gray-600 mb-1">Open</div>
+                        <div class="text-2xl font-bold" style="color: var(--color-accent);">8</div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- Decorative elements -->
+                <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-opacity-20 rounded-full" style="background-color: var(--color-accent); filter: blur(40px); z-index: -1;"></div>
+                <div class="absolute -top-4 -left-4 w-32 h-32 bg-opacity-10 rounded-full" style="background-color: var(--color-primary); filter: blur(40px); z-index: -1;"></div>
               </div>
+
+              <!-- Right Side - Content -->
               <div>
-                <h2 class="text-3xl font-bold mb-4">Manage Tickets Like Never Before</h2>
-                <p class="text-gray-600 mb-6">GetTix is a powerful ticket management system designed to streamline your workflow. Create, track, and resolve tickets with ease.</p>
-                <ul class="space-y-3">
-                  <li class="flex items-center gap-3">
-                    <span class="text-primary">✓</span>
-                    <span>Simple & Intuitive Interface</span>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-primary">✓</span>
-                    <span>Real-time Updates</span>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-primary">✓</span>
-                    <span>Powerful Analytics</span>
-                  </li>
-                </ul>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  Manage Tickets Like Never Before
+                </h2>
+                <p class="text-base text-gray-600 mb-5 leading-relaxed">
+                  GetTix is a powerful ticket management system designed to streamline your workflow. 
+                  Create, track, and resolve tickets with ease using our intuitive interface built for modern teams.
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center" style="background-color: rgba(20, 184, 166, 0.1);">
+                      <svg class="w-5 h-5" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-0.5 text-sm">Simple & Intuitive</h3>
+                      <p class="text-gray-600 text-xs">Clean interface designed for efficiency</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center" style="background-color: rgba(20, 184, 166, 0.1);">
+                      <svg class="w-5 h-5" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-0.5 text-sm">Real-time Updates</h3>
+                      <p class="text-gray-600 text-xs">Stay synchronized with instant notifications</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center" style="background-color: rgba(20, 184, 166, 0.1);">
+                      <svg class="w-5 h-5" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-0.5 text-sm">Powerful Analytics</h3>
+                      <p class="text-gray-600 text-xs">Make data-driven decisions with insights</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-12 md:py-16 lg:py-20 relative" style="background: linear-gradient(to bottom, white, #f8fafc, white);">
+          <div class="max-w-6xl mx-auto px-4" style="transform: translateY(0px);">
+            <div class="text-center mb-12">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Powerful Features</h2>
+              <p class="text-base text-gray-600 max-w-2xl mx-auto">
+                Everything you need to manage tickets efficiently
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Feature 1 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: rgba(20, 184, 166, 0.1);">
+                  <svg class="w-6 h-6" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Create & Edit</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Create tickets instantly with all essential details. Edit on-the-fly with our inline editing capabilities and auto-save functionality.
+                </p>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: rgba(20, 184, 166, 0.1);">
+                  <svg class="w-6 h-6" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Organize & Track</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Organize tickets by status, priority, or custom tags. Track progress with visual status indicators and timeline views.
+                </p>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: rgba(249, 115, 22, 0.1);">
+                  <svg class="w-6 h-6" style="color: var(--color-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Smart Search</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Find tickets instantly with our powerful search engine. Filter by multiple criteria and save custom search queries for quick access.
+                </p>
+              </div>
+
+              <!-- Feature 4 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: rgba(20, 184, 166, 0.1);">
+                  <svg class="w-6 h-6" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Real-time Sync</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Stay synchronized across all devices with real-time updates. Changes sync instantly, keeping your team on the same page.
+                </p>
+              </div>
+
+              <!-- Feature 5 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: rgba(249, 115, 22, 0.1);">
+                  <svg class="w-6 h-6" style="color: var(--color-accent);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Secure & Private</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Your data is encrypted and secure. Enterprise-grade security with role-based access control and audit trails.
+                </p>
+              </div>
+
+              <!-- Feature 6 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background-color: rgba(20, 184, 166, 0.1);">
+                  <svg class="w-6 h-6" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Advanced Analytics</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Get insights with comprehensive analytics and reports. Track team performance, resolution times, and ticket trends.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-12 md:py-16 lg:py-20 bg-gray-50 relative">
+          <div class="max-w-6xl mx-auto px-4" style="transform: translateY(0px);">
+            <div class="text-center mb-12">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Trusted by Teams Worldwide</h2>
+              <p class="text-base text-gray-600">See what our users are saying about GetTix</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Testimonial 1 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="flex items-center mb-6">
+                  <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
+                    JD
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">John Davis</h4>
+                    <p class="text-sm text-gray-600">Product Manager at TechCorp</p>
+                  </div>
+                </div>
+                <div class="flex mb-4">
+                  ${'⭐'.repeat(5)}
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  "GetTix has completely transformed our ticket management workflow. We've reduced resolution time by 40% and improved team productivity significantly."
+                </p>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="flex items-center mb-6">
+                  <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4" style="background: linear-gradient(135deg, var(--color-accent) 0%, #ea580c 100%);">
+                    SM
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Sarah Mitchell</h4>
+                    <p class="text-sm text-gray-600">Team Lead at DesignStudio</p>
+                  </div>
+                </div>
+                <div class="flex mb-4">
+                  ${'⭐'.repeat(5)}
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  "The interface is incredibly intuitive. Our entire team adopted it within days. The real-time updates and collaborative features are game-changers."
+                </p>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="card" style="padding: 24px; border: 1px solid #e5e7eb;">
+                <div class="flex items-center mb-6">
+                  <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4" style="background: linear-gradient(135deg, var(--color-primary) 0%, #64748b 100%);">
+                    MK
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Michael Kim</h4>
+                    <p class="text-sm text-gray-600">CTO at StartupHub</p>
+                  </div>
+                </div>
+                <div class="flex mb-4">
+                  ${'⭐'.repeat(5)}
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  "Best ticket management system we've tried. The analytics and reporting features give us incredible insights into our operations. Highly recommend!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-12 md:py-16 lg:py-20 pb-12 relative">
+          <div class="max-w-4xl mx-auto px-4" style="transform: translateY(0px);">
+            <div class="text-center mb-12">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+              <p class="text-base text-gray-600">Everything you need to know about GetTix</p>
+            </div>
+      
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div class="card" style="border: 1px solid #e5e7eb;">
+                <div style="padding: 24px;">
+                  <h3 class="font-semibold text-gray-900 mb-3">How do I create a new ticket?</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    Navigate to the Ticket Management page and click the 'Create Ticket' button. Fill in the title (required), description, select a status, and assign a priority level.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="border: 1px solid #e5e7eb;">
+                <div style="padding: 24px;">
+                  <h3 class="font-semibold text-gray-900 mb-3">Is there a mobile app available?</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    GetTix is fully responsive and works seamlessly on all devices through your web browser. Our mobile-friendly design ensures you can manage tickets on-the-go.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="border: 1px solid #e5e7eb;">
+                <div style="padding: 24px;">
+                  <h3 class="font-semibold text-gray-900 mb-3">How secure is my ticket data?</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    Security is our top priority. All your data is encrypted using industry-standard protocols. User-specific data isolation ensures each user only sees their own tickets.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

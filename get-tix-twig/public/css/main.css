@@ -92,6 +92,7 @@ a:hover {
 .gap-4 { gap: var(--space-4); }
 .gap-6 { gap: var(--space-6); }
 .gap-8 { gap: var(--space-8); }
+.gap-12 { gap: var(--space-12); }
 
 .grid {
   display: grid;
@@ -101,6 +102,11 @@ a:hover {
 .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.flex-shrink-0 { flex-shrink: 0; }
+.aspect-video { aspect-ratio: 16 / 9; }
 
 /* Spacing */
 .mt-4 { margin-top: var(--space-4); }
@@ -185,6 +191,61 @@ a:hover {
   flex: 1;
 }
 
+/* Position utilities */
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+/* Min-Height */
+.min-h-screen { min-height: 100vh; }
+.min-h-\\[70vh\\] { min-height: 70vh; }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+
+/* Top, Right, Bottom, Left spacing for absolute positioning */
+.top-20 { top: 80px; }
+.right-20 { right: 80px; }
+.bottom-20 { bottom: 80px; }
+.left-20 { left: 80px; }
+.bottom-0 { bottom: 0; }
+.left-0 { left: 0; }
+.right-0 { right: 0; }
+.-bottom-4 { bottom: -16px; }
+.-right-4 { right: -16px; }
+.-top-4 { top: -16px; }
+.-left-4 { left: -16px; }
+
+/* Width, Height */
+.w-64 { width: 256px; }
+.h-64 { height: 256px; }
+.w-80 { width: 320px; }
+.h-80 { height: 320px; }
+.w-24 { width: 96px; }
+.h-24 { height: 96px; }
+.w-32 { width: 128px; }
+.h-32 { height: 128px; }
+.w-3 { width: 12px; }
+.h-3 { height: 12px; }
+
+/* Background opacity */
+.bg-opacity-10 { background-color: rgba(0, 0, 0, 0.1); }
+.bg-opacity-20 { background-color: rgba(0, 0, 0, 0.2); }
+
+/* Border radius */
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Blur */
+.blur-3xl { filter: blur(80px); }
+.blur-40 { filter: blur(40px); }
+
+/* Z-index */
+.z-10 { z-index: 10; }
+.-z-10 { z-index: -10; }
+
+/* Margin */
+.mt-6 { margin-top: var(--space-6); }
+.mb-4 { margin-bottom: var(--space-4); }
+
 /* Responsive Utilities */
 @media (min-width: 640px) {
   .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -203,6 +264,8 @@ a:hover {
   .md\:text-left { text-align: left; }
   .md\:block { display: block; }
   .md\:hidden { display: none; }
+  .md\:py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+  .md\:mt-8 { margin-top: var(--space-8); }
 }
 
 @media (min-width: 1024px) {
