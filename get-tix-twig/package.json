@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "GetTix Ticket Management - Vanilla JS Implementation",
   "scripts": {
-    "serve": "npx serve public -p 3000"
+    "build": "echo Build complete - static files ready for deployment",
+    "prebuild": "echo Preparing deployment...",
+    "serve": "npx serve public -p 3000",
+    "start": "npm run serve",
+    "deploy:gh": "powershell -ExecutionPolicy Bypass -File deploy-to-gh-pages.ps1"
   },
   "keywords": ["ticket-management", "vanilla-js", "frontend"],
   "author": "",
