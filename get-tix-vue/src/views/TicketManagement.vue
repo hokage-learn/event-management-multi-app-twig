@@ -3,6 +3,9 @@ import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { useTicketsStore } from '@/stores/tickets'
+import { useToast } from '@/plugins/toast'
+
+const { toast } = useToast()
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -62,9 +65,12 @@ const handleCreate = () => {
   if (!validateForm()) return
   const result = ticketsStore.createTicket(formData.value)
   if (result.success) {
+    toast.success('Ticket created successfully!')
     showCreateModal.value = false
     formData.value = { title: '', description: '', status: 'open', priority: 'medium' }
     errors.value = {}
+  } else {
+    toast.error(result.error || 'Failed to create ticket')
   }
 }
 
@@ -84,10 +90,13 @@ const handleUpdate = () => {
   if (!validateForm()) return
   const result = ticketsStore.updateTicket(selectedTicket.value.id, formData.value)
   if (result.success) {
+    toast.success('Ticket updated successfully!')
     showEditModal.value = false
     selectedTicket.value = null
     formData.value = { title: '', description: '', status: 'open', priority: 'medium' }
     errors.value = {}
+  } else {
+    toast.error(result.error || 'Failed to update ticket')
   }
 }
 
@@ -99,8 +108,11 @@ const handleDeleteClick = (ticket) => {
 const confirmDelete = () => {
   const result = ticketsStore.deleteTicket(selectedTicket.value.id)
   if (result.success) {
+    toast.success('Ticket deleted successfully!')
     showDeleteModal.value = false
     selectedTicket.value = null
+  } else {
+    toast.error(result.error || 'Failed to delete ticket')
   }
 }
 
