@@ -22,47 +22,7 @@ onUnmounted(() => {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Side - Dashboard Image -->
         <div class="relative">
-          <div class="relative overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-primary to-accent">
-            <div class="aspect-video bg-white/95 p-8">
-              <div class="h-full bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 shadow-lg">
-                <!-- Mockup Browser Header -->
-                <div class="flex items-center space-x-2 mb-4">
-                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div class="ml-4 text-sm font-semibold text-gray-700">GetTix Dashboard</div>
-                </div>
-                
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-2 gap-4 mb-4">
-                  <div class="bg-white rounded-lg p-3 shadow">
-                    <div class="text-xs text-gray-600 mb-1">Total</div>
-                    <div class="text-2xl font-bold text-blue-600">12</div>
-                  </div>
-                  <div class="bg-white rounded-lg p-3 shadow">
-                    <div class="text-xs text-gray-600 mb-1">Open</div>
-                    <div class="text-2xl font-bold text-green-600">8</div>
-                  </div>
-                  <div class="bg-white rounded-lg p-3 shadow">
-                    <div class="text-xs text-gray-600 mb-1">In Progress</div>
-                    <div class="text-2xl font-bold text-yellow-600">3</div>
-                  </div>
-                  <div class="bg-white rounded-lg p-3 shadow">
-                    <div class="text-xs text-gray-600 mb-1">Closed</div>
-                    <div class="text-2xl font-bold text-gray-600">1</div>
-                  </div>
-                </div>
-                
-                <!-- Chart Area -->
-                <div class="bg-white rounded-lg p-4 shadow h-24 flex items-end justify-around">
-                  <div class="w-8 bg-blue-500 rounded-t" style="height: 60%"></div>
-                  <div class="w-8 bg-blue-500 rounded-t" style="height: 80%"></div>
-                  <div class="w-8 bg-blue-500 rounded-t" style="height: 70%"></div>
-                  <div class="w-8 bg-blue-500 rounded-t" style="height: 90%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img src="/src/assets/SSO.png" alt="Dashboard" class="w-full h-full object-cover rounded-3xl shadow-lg" />
           <!-- Decorative elements -->
           <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-3xl -z-10"></div>
           <div class="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>

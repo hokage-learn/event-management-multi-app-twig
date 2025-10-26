@@ -1,0 +1,15 @@
+{
+  "name": "get-tix-twig",
+  "version": "1.0.0",
+  "description": "GetTix Ticket Management - Vanilla JS Implementation",
+  "scripts": {
+    "serve": "npx serve public -p 3000"
+  },
+  "keywords": ["ticket-management", "vanilla-js", "frontend"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
+
