@@ -42,12 +42,12 @@ const toggleFaq = (id) => {
 </script>
 
 <template>
-  <section class="py-16 md:py-20 lg:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-12 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-        <p class="text-lg text-gray-600">Everything you need to know about GetTix</p>
-      </div>
+        <section class="py-12 md:py-16 lg:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+            <p class="text-base text-gray-600">Everything you need to know about GetTix</p>
+          </div>
       
       <div class="space-y-4">
         <div

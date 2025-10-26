@@ -1,15 +1,15 @@
 <script setup></script>
 
 <template>
-  <section class="py-16 md:py-20 lg:py-24 bg-gray-50">
-    <div class="max-w-container mx-auto px-4">
-      <div class="text-center mb-12 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted by Teams Worldwide</h2>
-        <p class="text-lg text-gray-600">See what our users are saying about GetTix</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+        <section class="py-12 md:py-16 lg:py-20 bg-gray-50">
+        <div class="max-w-container mx-auto px-4">
+          <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Trusted by Teams Worldwide</h2>
+            <p class="text-base text-gray-600">See what our users are saying about GetTix</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div class="flex items-center mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               JD
@@ -29,7 +29,7 @@
           </p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div class="flex items-center mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               SM
@@ -49,7 +49,7 @@
           </p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div class="flex items-center mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               MK

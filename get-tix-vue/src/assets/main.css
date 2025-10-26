@@ -11,30 +11,34 @@
   
   html {
     @apply font-sans antialiased;
+    font-family: 'Raleway', sans-serif;
   }
   
   body {
     @apply m-0 min-h-screen bg-white text-gray-900;
+    font-family: 'Raleway', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold leading-tight mb-4;
-    font-family: 'Bricolage Grotesque', serif;
-  }
-
-  a, button, li, span, p, {
-          
+    @apply font-bold leading-tight mb-3;
+    font-family: 'Bricolage Grotesque', sans-serif;
   }
   
-  h1 { @apply text-4xl; }
-  h2 { @apply text-3xl; }
-  h3 { @apply text-2xl; }
-  h4 { @apply text-xl; }
-  h5 { @apply text-lg; }
-  h6 { @apply text-base; }
+  h1 { @apply text-3xl md:text-4xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  h4 { @apply text-lg md:text-xl; }
+  h5 { @apply text-base md:text-lg; }
+  h6 { @apply text-sm md:text-base; }
+  
+  p {
+    @apply mb-3 md:mb-4 leading-relaxed text-sm md:text-base;
+    font-family: 'Raleway', sans-serif;
+  }
   
   a {
     @apply text-primary hover:text-primary-hover transition-colors;
+    font-family: 'Raleway', sans-serif;
   }
   
   a:hover {
@@ -68,6 +72,6 @@
   }
   
   .error-message {
-      @apply text-red-600 text-sm mt-1;
-    }
+    @apply text-red-600 text-sm mt-1;
+  }
 }
