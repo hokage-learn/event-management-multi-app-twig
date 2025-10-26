@@ -186,5 +186,3 @@ This is a project for demonstration purposes.
 ## 🔗 Links
 
 - React Implementation: [./get-tix/README.md](./get-tix/README.md)
-- Vue.js Implementation: Coming Soon
-- Twig Implementation: Coming Soon
