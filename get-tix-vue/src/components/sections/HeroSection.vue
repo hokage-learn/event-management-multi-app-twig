@@ -1,11 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 
 const router = useRouter()
 const authStore = useAuthStore()
 const isLoading = ref(false)
+const scrollY = ref(0)
 
 const handleGetStarted = async () => {
   isLoading.value = true
@@ -18,16 +19,37 @@ const handleGetStarted = async () => {
   }
   isLoading.value = false
 }
+
+const handleScroll = () => {
+  scrollY.value = window.scrollY
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
   <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-emerald-600 to-green-700">
-    <div class="absolute inset-0">
-      <div class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
-    </div>
+    <!-- Background elements with parallax -->
+    <div 
+      class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"
+      :style="{ transform: `translateY(${scrollY * 0.3}px)` }"
+    ></div>
+    <div 
+      class="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl"
+      :style="{ transform: `translateY(${scrollY * 0.2}px)` }"
+    ></div>
     
-    <div class="relative z-10 max-w-container mx-auto px-4 py-16 text-center">
+    <!-- Content with slight parallax -->
+    <div 
+      class="relative z-10 max-w-container mx-auto px-4 py-16 text-center"
+      :style="{ transform: `translateY(${scrollY * 0.1}px)` }"
+    >
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
         Streamline Your Ticket Management
       </h1>
@@ -44,7 +66,11 @@ const handleGetStarted = async () => {
       </button>
     </div>
     
-    <div class="absolute bottom-0 left-0 right-0">
+    <!-- Wave with parallax -->
+    <div 
+      class="absolute bottom-0 left-0 right-0"
+      :style="{ transform: `translateY(${scrollY * 0.15}px)` }"
+    >
       <img src="/src/assets/wave-background.svg" alt="Wave" class="w-full h-20 md:h-32" />
     </div>
   </section>

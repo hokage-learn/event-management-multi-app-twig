@@ -1,8 +1,27 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const scrollY = ref(0)
+
+const handleScroll = () => {
+  scrollY.value = window.scrollY
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
 
 <template>
-  <section id="features" class="py-12 md:py-16 lg:py-20 bg-gray-50">
-    <div class="max-w-container mx-auto px-4 text-center">
+  <section id="features" class="py-12 md:py-16 lg:py-20 bg-gray-50 relative">
+    <div 
+      class="max-w-container mx-auto px-4 text-center"
+      :style="{ transform: `translateY(${Math.max(0, scrollY * 0.05)}px)` }"
+    >
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Features</h2>
       <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8 md:mb-12">
         Powerful features to help you manage your tickets with ease
