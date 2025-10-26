@@ -17,7 +17,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-        <section id="about" class="py-12 md:py-16 lg:py-20 bg-white relative">
+        <section id="about" class="py-12 md:py-16 lg:py-20 bg-white relative border-t border-b border-gray-200">
     <div class="max-w-container mx-auto px-4" :style="{ transform: `translateY(${Math.max(0, scrollY * 0.05)}px)` }">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Side - Image/Dashboard Mockup -->

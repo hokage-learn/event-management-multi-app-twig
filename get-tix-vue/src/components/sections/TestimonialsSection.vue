@@ -17,7 +17,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-        <section class="py-12 md:py-16 lg:py-20 bg-white relative">
+        <section class="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white relative">
         <div class="max-w-container mx-auto px-4" :style="{ transform: `translateY(${Math.max(0, scrollY * 0.06)}px)` }">
           <div class="text-center mb-10 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Trusted by Teams Worldwide</h2>
@@ -27,7 +27,7 @@ onUnmounted(() => {
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div class="flex items-center mb-6">
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               JD
             </div>
             <div>
@@ -47,7 +47,7 @@ onUnmounted(() => {
 
         <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div class="flex items-center mb-6">
-            <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-secondary to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               SM
             </div>
             <div>
@@ -67,7 +67,7 @@ onUnmounted(() => {
 
         <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div class="flex items-center mb-6">
-            <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-accent to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
               MK
             </div>
             <div>

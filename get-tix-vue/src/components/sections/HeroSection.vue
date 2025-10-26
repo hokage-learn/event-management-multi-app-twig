@@ -34,7 +34,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-emerald-600 to-green-700">
+  <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-blue-600 to-indigo-700">
     <!-- Background elements with parallax -->
     <div 
       class="absolute top-20 right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"

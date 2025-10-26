@@ -8,31 +8,37 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#059669', // Deep green
-          hover: '#047857',
-          light: '#d1fae5',
+          DEFAULT: '#2563eb', // Royal Blue
+          hover: '#1d4ed8',
+          light: '#dbeafe',
+          dark: '#1e40af',
         },
         accent: {
-          DEFAULT: '#d97706', // Gold/Amber
-          hover: '#b45309',
-          light: '#fef3c7',
+          DEFAULT: '#7c3aed', // Purple
+          hover: '#6d28d9',
+          light: '#ede9fe',
+        },
+        secondary: {
+          DEFAULT: '#ec4899', // Pink
+          hover: '#db2777',
+          light: '#fce7f3',
         },
         status: {
-          open: '#059669', // Deep green
-          'in-progress': '#d97706', // Gold/Amber
-          closed: '#6b7280',
+          open: '#2563eb', // Blue
+          'in-progress': '#7c3aed', // Purple
+          closed: '#6b7280', // Gray
         },
         gray: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827',
         }
       },
       maxWidth: {
