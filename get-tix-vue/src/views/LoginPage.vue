@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
-import { Link } from 'vue-router'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -76,12 +75,12 @@ const handleSubmit = async (e) => {
     <!-- Right Side - Form -->
     <div class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative">
       <!-- Back Link -->
-      <Link to="/" class="absolute top-6 left-6 flex items-center text-gray-600 hover:text-primary transition-colors">
+      <router-link to="/" class="absolute top-6 left-6 flex items-center text-gray-600 hover:text-primary transition-colors">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
         Back to Home
-      </Link>
+      </router-link>
 
       <div class="max-w-md w-full space-y-8">
         <!-- Mobile Logo -->
@@ -102,9 +101,9 @@ const handleSubmit = async (e) => {
           </h2>
           <p class="mt-2 text-sm text-gray-600">
             Or
-            <Link to="/auth/signup" class="font-medium text-primary hover:text-primary-hover">
+            <router-link to="/auth/signup" class="font-medium text-primary hover:text-primary-hover">
               create a new account
-            </Link>
+            </router-link>
           </p>
         </div>
 
