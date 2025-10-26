@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    @apply font-sans antialiased;
+  }
+  
+  body {
+    @apply m-0 min-h-screen bg-white text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight mb-4;
+  }
+  
+  h1 { @apply text-4xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+  h5 { @apply text-lg; }
+  h6 { @apply text-base; }
+  
+  a {
+    @apply text-primary hover:text-primary-hover transition-colors;
+  }
+  
+  a:hover {
+    @apply underline;
+  }
+  
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  a:focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
+  }
+}
+
+@layer components {
+  .status-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium capitalize;
+  }
+  
+  .status-open {
+    @apply bg-status-open/10 text-status-open;
+  }
+  
+  .status-in-progress {
+    @apply bg-status-in-progress/10 text-status-in-progress;
+  }
+  
+  .status-closed {
+    @apply bg-status-closed/10 text-status-closed;
+  }
+  
+  .error-message {
+    @apply text-red-600 text-sm mt-1;
+  }
+}
