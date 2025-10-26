@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useRoute, RouterLink } from 'vue-router'
+import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const scrolled = ref(false)
@@ -37,7 +37,7 @@ const scrollToSection = (id) => {
     <div class="max-w-container mx-auto px-4">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <RouterLink to="/" class="flex items-center space-x-2">
+        <router-link to="/" class="flex items-center space-x-2">
           <div class="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
@@ -46,7 +46,7 @@ const scrollToSection = (id) => {
           <span :class="['text-2xl font-bold transition-colors', scrolled ? 'text-gray-900' : 'text-white']">
             GetTix
           </span>
-        </RouterLink>
+        </router-link>
 
         <!-- Mobile Menu Button -->
         <button
@@ -64,12 +64,12 @@ const scrollToSection = (id) => {
 
         <!-- Center Links -->
         <div class="hidden md:flex items-center space-x-8">
-          <RouterLink
+          <router-link
             to="/"
             :class="['font-medium transition-colors', route.path === '/' ? 'text-primary' : scrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-primary-light']"
           >
             Home
-          </RouterLink>
+          </router-link>
           <a
             href="#"
             @click.prevent="scrollToSection('features')"
@@ -88,31 +88,31 @@ const scrollToSection = (id) => {
 
         <!-- Auth CTAs - Hidden on mobile -->
         <div class="hidden md:flex items-center space-x-4 z-50 relative">
-          <RouterLink
+          <router-link
             to="/auth/login"
             class="px-4 py-2 rounded-lg font-medium transition-all text-white border border-white/50 hover:bg-white/10"
           >
             Login
-          </RouterLink>
-          <RouterLink
+          </router-link>
+          <router-link
             to="/auth/signup"
             class="px-6 py-2 bg-white text-primary rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
           >
             Get Started
-          </RouterLink>
+          </router-link>
         </div>
       </div>
 
       <!-- Mobile Menu -->
       <div v-if="mobileMenuOpen" class="md:hidden border-t border-gray-200 bg-white">
         <div class="px-4 py-4 space-y-4">
-          <RouterLink
+          <router-link
             to="/"
             @click="mobileMenuOpen = false"
             :class="['block py-2 font-medium', route.path === '/' ? 'text-primary' : 'text-gray-700']"
           >
             Home
-          </RouterLink>
+          </router-link>
           <a
             href="#"
             @click.prevent="scrollToSection('features')"
@@ -128,20 +128,20 @@ const scrollToSection = (id) => {
             About
           </a>
           <div class="pt-4 space-y-3 border-t border-gray-200">
-            <RouterLink
+            <router-link
               to="/auth/login"
               @click="mobileMenuOpen = false"
               class="block w-full text-center px-4 py-2 rounded-lg font-medium text-gray-700 border border-gray-300 hover:border-primary"
             >
               Login
-            </RouterLink>
-            <RouterLink
+            </router-link>
+            <router-link
               to="/auth/signup"
               @click="mobileMenuOpen = false"
               class="block w-full text-center px-4 py-2 rounded-lg font-medium text-white bg-gradient-to-r from-primary to-accent hover:from-primary-hover hover:to-accent-hover"
             >
               Get Started
-            </RouterLink>
+            </router-link>
           </div>
         </div>
       </div>
