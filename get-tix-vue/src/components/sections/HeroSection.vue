@@ -47,7 +47,7 @@ onUnmounted(() => {
     
     <!-- Content with slight parallax -->
     <div 
-      class="relative z-10 max-w-container mx-auto px-4 py-12 md:py-16 text-center"
+      class="relative z-10 max-w-container mx-auto px-4 py-12 md:py-16 text-center mt-20"
       :style="{ transform: `translateY(${scrollY * 0.1}px)` }"
     >
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
